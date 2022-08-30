@@ -1,0 +1,30 @@
+RUNNING A WEB APP
+1. As we run a normal java class we need a class with a main. It is same to spring boot but the only difference is
+   you will have to put this annotation @SpringBootApplication
+
+STATIC FOLDER IN RESOURCES
+There is where you put your HTML or CSS and also IMAGES
+
+TO INVOKE THE WEB
+1. We need a controller class which will tell the web that we invoking the web from a particular class.
+2. Inside that class we use the @Controller annotation
+3. Inside the controller class you need to write the method to tell that anyone who opens e.g /home should be redirected
+   to e.g home.html and for that we going to use the @RequestMapping("/home") annotation
+
+APPLICATION.PROPERTIES FOLDER
+1. Is where you should go if you wanna make any configuration by yourself
+
+CHANGING THE SERVER PORT
+1. Go to application.properties folder and write -> server.port = 8081
+
+CHANGING THE CONTEXT PATH
+1. Go to application.properties folder and write -> server.servlet.context-path = /demonstration
+
+RANDOM PORT NUMBER
+1. Simple go to application.properties folder and write -> server.port = 0
+    this will tell the spring that the programmer wants to start the server in a random ports each time
+    it is helpful if you wanna run your web app in different instances
+
+LOCAL HOST 8080
+1. Using small configuration you can run your localhost without mentioning the /home, check the controller class
+    @RequestMapping(value = {"", "/", "home"})

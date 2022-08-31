@@ -33,3 +33,18 @@ THYMELEAF
 1. Moder server side template engine which provides a way for a developer to work frontend and backend, and let
    the developers to deploy their work on the single server
 2. By working with Spring MVC, generates the html content based on the template we want
+
+HOW TO USE THYMELEAF
+1. Create your html folder inside the template folder because thymeleaf is a template file
+2. then you need to import the namespace of the thymeleaf inside of a html file in the html tag
+    after you do that your html wills start using thymeleaf tags which start with th
+3. After doing that we gonna pass the Model interface and its object on the particular html controller file
+    then we will be good to go
+4. After passing the Model interface as a parameter in the particular html method then you use the mode.addAttribute
+    methods which accepts a variable and a value inside it and both are in quotes "".
+
+
+
+
+
+

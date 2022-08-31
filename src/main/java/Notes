@@ -28,3 +28,8 @@ RANDOM PORT NUMBER
 LOCAL HOST 8080
 1. Using small configuration you can run your localhost without mentioning the /home, check the controller class
     @RequestMapping(value = {"", "/", "home"})
+
+THYMELEAF
+1. Moder server side template engine which provides a way for a developer to work frontend and backend, and let
+   the developers to deploy their work on the single server
+2. By working with Spring MVC, generates the html content based on the template we want

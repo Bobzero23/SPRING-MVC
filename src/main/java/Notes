@@ -43,7 +43,15 @@ HOW TO USE THYMELEAF
 4. After passing the Model interface as a parameter in the particular html method then you use the mode.addAttribute
     methods which accepts a variable and a value inside it and both are in quotes "".
 
+DISABLING CACHE IN THYMELEAF
+1. This is why you wont have to restart the server everytime you make some change in you template
+you just build and then you are good to go
+To do it go to the your properties.application and say spring.thymeleaf.cache = false
+For more information go check the application properties app there are more details
+This is not for java codes so if you change java code you gonna have to restart the server
 
+                                SPRING BOOT DEVTOOLS
+This makes you just write java code and just build and you are good to go
 
 
 

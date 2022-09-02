@@ -66,6 +66,13 @@ MVC ARCHITECTURE
 
                                        WEBSITE PROJECT
 1. Putting the HEADER and the FOOTER html code in different files
+   but you will import the files of those two files code on their places in the home.html file
+
+REDIRECTING A PARTICULAR LINK TO ANOTHER USING THYMELEAF
+th:href="@{/home}"
+
+REDIRECTING A HTML FILE TO ANOTHER HTML FILE
+<div th:replace="header :: header"></div>
 
 
 

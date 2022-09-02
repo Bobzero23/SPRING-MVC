@@ -55,6 +55,19 @@ This makes you just write java code and just build and you are good to go
 
 DOWNLOAD LIVERELOAD EXTENSION IN YOUR WEB BROWSER
 
+                                MVC (MODEL VIEW CONTROLLER)
+1. The main objective is to achieve loose double coupling inside the web application we are building.
+
+MVC ARCHITECTURE
+1.Client send a request in a http format
+2.The request goes to Servlet Container such as Tomcat
+3.Then the Servlet Container send the request to the Dispatcher Servlet which found in the web application
+4.The request dispatcher tells the.. I WILL CONTINUE WITH THIS SOME DAY
+
+                                       WEBSITE PROJECT
+1. Putting the HEADER and the FOOTER html code in different files
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.website;
 
 /*imports*/
 import org.springframework.boot.SpringApplication;

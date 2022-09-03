@@ -74,7 +74,13 @@ th:href="@{/home}"
 REDIRECTING A HTML FILE TO ANOTHER HTML FILE
 <div th:replace="header :: header"></div>
 
-
+TO AVOID CREATING CONTROLLERS EVERYTIME
+1. Create a package called webconfig
+2. Create a pojo class which is going to handle all he controllers inside it
+3. That class is going to implement the WebMvcConfigurer
+4. That class will also have the @Configuration annotation
+5. Inside that class you override a method called addViewControllers and that is
+   how you are going to configure all the controllers just like that inside that method. For more info look at the code
 
 
 

@@ -1,8 +1,7 @@
-package com.example.demo.controller;
+package com.example.website.controller;
 
 /*imports*/
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -11,8 +10,7 @@ public class HomeController {
 
     @RequestMapping(value = {"", "/", "home"})
     /*controller method*/
-    public String displayHomePage(Model model){
-        model.addAttribute("username", "Bobzero");
+    public String displayHomePage(){
         return "home.html";
     }
 

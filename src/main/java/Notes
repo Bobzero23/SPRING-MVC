@@ -60,9 +60,15 @@ DOWNLOAD LIVERELOAD EXTENSION IN YOUR WEB BROWSER
 
 MVC ARCHITECTURE
 1.Client send a request in a http format
-2.The request goes to Servlet Container such as Tomcat
-3.Then the Servlet Container send the request to the Dispatcher Servlet which found in the web application
-4.The request dispatcher tells the.. I WILL CONTINUE WITH THIS SOME DAY
+2.The request goes to Servlet Container such as Tomcat, this convert the http request to the servlet request
+    and sending the request to the dispatcher servlet
+3.Dispatcher servlet only knows the path but it doesn't anything else like method or which controller and for
+    that it goes and ask handler mapping like which controller and which method shall be invoked and it will
+    finish the rest by visiting those controller and invoking the methods needed
+4. Then the controller will return the view which shall be displayed to the client as a response like view.html
+    but the dispatcher doesn't know about the views so it goes and ask View Resolver
+5. View resolver will finish the view job and all return the view to the servlet dispatcher and again it sends back
+    to the server and the server sends it back to the client
 
                                        WEBSITE PROJECT
 1. Putting the HEADER and the FOOTER html code in different files
@@ -74,6 +80,7 @@ th:href="@{/home}"
 REDIRECTING A HTML FILE TO ANOTHER HTML FILE
 <div th:replace="header :: header"></div>
 
+             WEB CONFIG FILE
 TO AVOID CREATING CONTROLLERS EVERYTIME
 1. Create a package called webconfig
 2. Create a pojo class which is going to handle all he controllers inside it
@@ -82,5 +89,8 @@ TO AVOID CREATING CONTROLLERS EVERYTIME
 5. Inside that class you override a method called addViewControllers and that is
    how you are going to configure all the controllers just like that inside that method. For more info look at the code
 
+QUICK TIP:
+sometimes the webpage doesn't reload automatically even after you used the devtools the thing is go to your LOCAL
+maven file and delete the files found inside the target file and that will resolve this issue
 
 

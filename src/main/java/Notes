@@ -93,4 +93,12 @@ QUICK TIP:
 sometimes the webpage doesn't reload automatically even after you used the devtools the thing is go to your LOCAL
 maven file and delete the files found inside the target file and that will resolve this issue
 
+GETTING THE MESSAGE FROM THE PAGE
+1. Go to the particular html file controller which you are working with and create another method and pass the map too.
+2. Create a method with value ModelAndView which takes @RequestParam for each value match in the html, please make sure
+    the values matches I mean from UI and in the code you are writing
 
+
+MODEL AND VIEW
+This object is used when you want to take an input from the user and to tell the user than you received the input by like
+maybe emptying the blanks e.t.c ...

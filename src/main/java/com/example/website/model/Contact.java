@@ -20,6 +20,14 @@ public class Contact {
         this.name = name;
     }
 
+    public String getMobileNum() {
+        return mobileNum;
+    }
+
+    public void setMobileNum(String mobileNum) {
+        this.mobileNum = mobileNum;
+    }
+
     public String getEmail() {
         return email;
     }

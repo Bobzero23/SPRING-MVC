@@ -102,3 +102,30 @@ GETTING THE MESSAGE FROM THE PAGE
 MODEL AND VIEW
 This object is used when you want to take an input from the user and to tell the user than you received the input by like
 maybe emptying the blanks e.t.c ...
+
+SUBMITTING INFORMATION FROM A PAGE
+Sometimes submitting information might become hard if there a lot of info input to take from the page so fot that
+there is a good approach for it by creating a package which will handle the models and there you create a pojo
+which taking all the values and create their getters and setters and also the toString method.
+
+NORMALLY INSIDE A PRODUCT WEB SERVICE YOU WILL BUILD YOUR LOGIC SUCH A WAY THAT INSIDE YOUR CONTROLLER LAYER YOU WILL DO
+ALL YOUR PRIMARY VALIDATION AND AFTER FINISHING THAT YOU WILL GIVE THE JOB TO SERVICE LAYER AND AFTER SERVICE LAYER IS DONE
+IT WILL SEND THE WORK TO THE PERSISTENCE LAYER AND TO MAKE ALL OF THESE WORK TOGETHER YOU GONNA HAVE TO THE AUTO WIRING
+INJECTION IN CONTACT CONTROLLER EXAMPLE IF YOU WANNA WORK WITH CONTACT SERVICE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

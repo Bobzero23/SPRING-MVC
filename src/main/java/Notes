@@ -132,9 +132,14 @@ there you can filter the price like only high or whatever that the usage of the 
 2. Between query param you use & sign to separate them and is a good practice to use to most three params
 3. We normally use the @RequestParam annotation to to accept the query or accept the form data tha we're going to receive
 5. We can also make the request param as MANDATORY or OPTIONAL, is like the user cant pass without filling the blank
+6. To use them go to the particular link e.g holidays in footer.html and thymeleaf provides us an easy way to do this
+7. After that you go the particular controller class and accepting the params
+Note: Adding your params to Model attribute will give you an advantage to be able to send them back to the user
+this are those links appear left bottom of the screen whenever hover around the cursor on the links in the website
 
-
-
+DISPLAYING THE COLUMN ACCORDINGLY
+Thymeleaf provides us the ability to make the html display according to the condition we put as we did in the
+holidays.html to the rows and columns for the festival holidays e.g th:if="${festival} == true"
 
 
 

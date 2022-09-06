@@ -139,7 +139,7 @@ this are those links appear left bottom of the screen whenever hover around the 
 
 DISPLAYING THE COLUMN ACCORDINGLY
 Thymeleaf provides us the ability to make the html display according to the condition we put as we did in the
-holidays.html to the rows and columns for the festival holidays e.g th:if="${festival} == true"
+holidays.html to the rows and columns for the festival holidays e.g th:if="${festival} == true" and that's it.
 
 
 

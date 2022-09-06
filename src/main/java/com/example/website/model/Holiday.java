@@ -1,5 +1,9 @@
 package com.example.website.model;
 
+/*imports*/
+import lombok.Data;
+
+@Data
 public class Holiday {
 
     /*fields*/
@@ -12,24 +16,4 @@ public class Holiday {
         FESTIVAL, FEDERAL;
     }
 
-    /*constructor*/
-    public Holiday(String day, String reason, Type type) {
-        this.day = day;
-        this.reason = reason;
-        this.type = type;
-    }
-
-    /*******GETTERS*********/
-
-    public String getDay() {
-        return day;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public Type getType() {
-        return type;
-    }
 }

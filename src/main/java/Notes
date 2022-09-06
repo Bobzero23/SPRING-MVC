@@ -119,8 +119,12 @@ HOW TO SEND A DATA FROM BACKEND TO FRONTEND
     inside this pojo class you can have the field and constructor etc. check the codes
 2. We need a controller class for mapping the structure here is where we do the wiring to and define our business logic
 
-
-
+LOMBOK
+This is a java library which provides some annotation to help a java programmer not to repeat some statements e.g getters
+and setter, this library do create all the getter and setters in the background when we use its annotation
+1.@Data is the common annotation which has all getters and setter and some more inside it.
+2.@Slf4j is the annotation we use for Log instead of creating a log object use this and use the log object directly.
+To start to use it, You gonna have to inject its dependencies
 
 
 

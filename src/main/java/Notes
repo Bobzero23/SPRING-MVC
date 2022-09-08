@@ -140,6 +140,21 @@ this are those links appear left bottom of the screen whenever hover around the 
 DISPLAYING THE COLUMN ACCORDINGLY
 Thymeleaf provides us the ability to make the html display according to the condition we put as we did in the
 holidays.html to the rows and columns for the festival holidays e.g th:if="${festival} == true" and that's it.
+In the method if you say that @RequestParam(Required = false ) you are making in optional
+
+PATH PARAM vs QUERY PARAM
+The primary difference between these two is, in QUERY param  the frontend application can send a request as URL
+
+PATH PARAM
+We use @PathVariable annotation to pass the name of the variable inside our method.
+Note: There is not default value inside path param.
+1. You need to catch the path variable by creating a variable inside your getting mapping in the controller file
+2. Pass the same variable with the same name using @PathVariable inside method input parameter
+3. After that you might want to write a logic to display the page accordingly because here is no boolean stuffs like
+    inside query param check the holiday controller method for more understanding
+Note: DON NOT FORGET TO MENTION THE '/' IN THE href LINK SO IT BECOME RECOGNIZABLE BY THE SPRING FRAMEWORK
+
+
 
 
 

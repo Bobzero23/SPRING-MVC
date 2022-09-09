@@ -157,12 +157,20 @@ Note: There is not default value inside path param.
     inside query param check the holiday controller method for more understanding
 Note: DON NOT FORGET TO MENTION THE '/' IN THE href LINK SO IT BECOME RECOGNIZABLE BY THE SPRING FRAMEWORK
 
+VALIDATIONS
+Actually this one is very important imagine you ask a user to enter a phone number and then they enter their name..
 
+CLIENT SIDE VALIDATIONS
+This is like when you put a must for a user to put the info or fill the field.
+Go to a certain html field which you want to be must filled field and put required = "true"
+Note: this kind of validation is not safe because someone can interfere with your code in a browser and bypass it
+      so it is better to have both client side and server side validations
 
-
-
-
-
+VALIDATIONS WITH SPRING BOOT
+1. Inject the dependencies
+2. In each validation pojo class use @Valid annotation
+Note: there are two libraries in Java which provides these validations, Javax and Hibernate.
+These validations we put in the Pojo classes in model package, check the contact Pojo class for more info
 
 
 

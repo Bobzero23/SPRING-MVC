@@ -169,8 +169,46 @@ Note: this kind of validation is not safe because someone can interfere with you
 VALIDATIONS WITH SPRING BOOT
 1. Inject the dependencies
 2. In each validation pojo class use @Valid annotation
-Note: there are two libraries in Java which provides these validations, Javax and Hibernate.
+Note: There are two libraries in Java which provides these validations, Javax and Hibernate.
 These validations we put in the Pojo classes in model package, check the contact Pojo class for more info
+Note: We need to let the contact.html know that there is a validation.
+
+LETTING HTML KNOW ABOUT THE VALIDATION
+1. Go to your particular controller Pojo class of the particular html class
+2. Find the method which displaying the html file and there add a Model object in input method parameter
+3. Use the model object to create a attribute and inside that attribute you need to send the object of contact
+    That way, you will tell the thymeleaf that any validations performs should be performed according to that Pojo class
+4. Go to the Contact.html and you need to build a relationship between the html file and and the Pojo class and for that,
+   find the form where the inputs are coming from and mention this th:object="${contact}"
+5. You also have to build a link between the field in a bean Contact class and the fields in the html file and for that,
+    find the field where you put names in your html file and do this, remove the name and id's and id and add the thymeleaf
+    like this  th:object="${contact}"
+Note: Now whenever a user submitting a change in the html file action will perform which goes to savaMessage method inside
+      the contactController class there we need to make some changes inside the method input parameter
+6. add the @Valid and @ModelAttribute("contact") to method input parameter before the Contact object which is inside the
+    method input parameter, after the contact object put a coma and add Error object so if there is any error identified
+    our spring frame work will send the error to us.
+Notes: Here you have a big chance to make a mess this is kinda messy work because after you declare the errors object
+        in the method input you might wanna make changes inside the method to get the errors which you gonna have to use
+        log with some if statements and for that also you method needs to return String type because you are getting errors
+        from the log and this is you must do
+7. Write an if statement to check if there is any errors which if there is you will catch them with a log object
+8. Write a log to get the errors inside the if statement
+9. Change the method return type to String
+10. Return the html page as a String inside the if statement
+11. Also redirect with String only not with Model type...
+Note: Check the ContactController for more understanding
+13. And you should go to the Contact html file to displaying the errors which you are getting from the backend
+    past this on top of the form
+        <ul>
+                            <li class="alert alert-danger" role="alert"
+                                th:each="error : ${#fields.errors('contact.*')}" th:text="${error}" />
+                        </ul>
+
+
+
+
+
 
 
 

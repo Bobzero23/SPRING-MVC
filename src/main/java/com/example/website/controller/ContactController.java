@@ -3,12 +3,20 @@ package com.example.website.controller;
 /*imports*/
 import com.example.website.model.Contact;
 import com.example.website.service.ContactService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
+
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
+@Slf4j
 @Controller
 public class ContactController {
 
@@ -25,7 +33,8 @@ public class ContactController {
     }
 
     @RequestMapping("/contact")
-    public String displayContactPage(){
+    public String displayContactPage(Model model){
+        model.addAttribute("contact", new Contact());
         return "contact.html";
     }
 
@@ -44,9 +53,13 @@ public class ContactController {
 
     @RequestMapping(value = "/saveMsg",method = POST)
     /*this method will redirect the user to the fresh new page*/
-    public ModelAndView saveMessage(Contact contact){
+    public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
         contactService.saveMessageDetails(contact);
-        return new ModelAndView("redirect:/contact");
+        if (errors.hasErrors()){
+            log.error("Contact form validation failed due to: " + errors.toString());
+            return "contact.html";
+        }
+        return "redirect:/contact";
     }
 
 }

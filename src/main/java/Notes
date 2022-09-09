@@ -3,16 +3,19 @@ RUNNING A WEB APP
    you will have to put this annotation @SpringBootApplication
 
 STATIC FOLDER IN RESOURCES
-There is where you put your HTML or CSS and also IMAGES
+There is where you put your CSS and JS OR IMAGES ETC.
+
+TEMPLATE FOLDER IN RESOURCES
+There is where you put your html folders if you are using thymeleaf
 
 TO INVOKE THE WEB
-1. We need a controller class which will tell the web that we invoking the web from a particular class.
+1. We need a controller class which will tell the web that we invoking the web from a particular html.
 2. Inside that class we use the @Controller annotation
 3. Inside the controller class you need to write the method to tell that anyone who opens e.g /home should be redirected
    to e.g home.html and for that we going to use the @RequestMapping("/home") annotation
 
 APPLICATION.PROPERTIES FOLDER
-1. Is where you should go if you wanna make any configuration by yourself
+1. Is where you should go if you wanna make any configuration about SpringBoot by yourself
 
 CHANGING THE SERVER PORT
 1. Go to application.properties folder and write -> server.port = 8081
@@ -30,9 +33,9 @@ LOCAL HOST 8080
     @RequestMapping(value = {"", "/", "home"})
 
 THYMELEAF
-1. Moder server side template engine which provides a way for a developer to work frontend and backend, and let
+1. Modern server side template engine which provides a way for a developer to work frontend and backend, and let
    the developers to deploy their work on the single server
-2. By working with Spring MVC, generates the html content based on the template we want
+2. By working with Spring MVC, Thymeleaf generates the html content based on the template we want
 
 HOW TO USE THYMELEAF
 1. Create your html folder inside the template folder because thymeleaf is a template file
@@ -40,7 +43,7 @@ HOW TO USE THYMELEAF
     after you do that your html wills start using thymeleaf tags which start with th
 3. After doing that we gonna pass the Model interface and its object on the particular html controller file
     then we will be good to go
-4. After passing the Model interface as a parameter in the particular html method then you use the mode.addAttribute
+4. After passing the Model interface as a parameter in the particular html method then you use the model.addAttribute
     methods which accepts a variable and a value inside it and both are in quotes "".
 
 DISABLING CACHE IN THYMELEAF
@@ -51,7 +54,7 @@ For more information go check the application properties app there are more deta
 This is not for java codes so if you change java code you gonna have to restart the server
 
                                 SPRING BOOT DEVTOOLS
-This makes you just write java code and just build and you are good to go
+This makes you just write java code and just build and you are good to go so inject the dependencies
 
 DOWNLOAD LIVERELOAD EXTENSION IN YOUR WEB BROWSER
 
@@ -74,7 +77,7 @@ MVC ARCHITECTURE
 1. Putting the HEADER and the FOOTER html code in different files
    but you will import the files of those two files code on their places in the home.html file
 
-REDIRECTING A PARTICULAR LINK TO ANOTHER USING THYMELEAF
+REDIRECTING A PARTICULAR LINK TO ANOTHER HTML PAGE USING THYMELEAF
 th:href="@{/home}"
 
 REDIRECTING A HTML FILE TO ANOTHER HTML FILE
@@ -101,10 +104,10 @@ GETTING THE MESSAGE FROM THE PAGE
 
 MODEL AND VIEW
 This object is used when you want to take an input from the user and to tell the user than you received the input by like
-maybe emptying the blanks e.t.c ...
+maybe emptying the blanks or refreshing the page e.t.c ...
 
 SUBMITTING INFORMATION FROM A PAGE
-Sometimes submitting information might become hard if there a lot of info input to take from the page so fot that
+Sometimes submitting information might become hard if there a lot of info input to take from the page so for that
 there is a good approach for it by creating a package which will handle the models and there you create a pojo
 which taking all the values and create their getters and setters and also the toString method.
 

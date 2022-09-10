@@ -60,17 +60,17 @@ Author URL: http://w3layouts.com
                                        class="contact-input" />
                             </div>
                             <div class="col-sm-6">
-                                <input type="text" th:object="${mobileNum}" placeholder="Your Mobile Number"
+                                <input type="text" th:field="*{mobileNum}" placeholder="Your Mobile Number"
                                        class="contact-input" />
                             </div>
                         </div>
-                        <input type="text" th:object="${email}" placeholder="Your Email"
+                        <input type="text" th:field="*{email}" placeholder="Your Email"
                                class="contact-input" />
-                        <input type="text" th:object="${subject}" placeholder="Subject"
+                        <input type="text" th:field="*{subject}" placeholder="Subject"
                                class="contact-input" />
                     </div>
                     <div class="form-input">
-                        <textarea th:object="${message}" placeholder="Type your message here"></textarea>
+                        <textarea th:field="*{message}" placeholder="Type your message here"></textarea>
                     </div>
                     <div class="text-start">
                         <button class="btn btn-style btn-style-3">Send Message</button>

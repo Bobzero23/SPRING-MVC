@@ -150,27 +150,27 @@ The primary difference between these two is, in QUERY param  the frontend applic
 
 PATH PARAM
 We use @PathVariable annotation to pass the name of the variable inside our method.
-Note: There is not default value inside path param.
-1. You need to catch the path variable by creating a variable inside your getting mapping in the controller file
+Note: There is no default value inside path param.
+1. You need to catch the path of the variable by creating a variable inside your getting mapping in the controller file
 2. Pass the same variable with the same name using @PathVariable inside method input parameter
 3. After that you might want to write a logic to display the page accordingly because here is no boolean stuffs like
     inside query param check the holiday controller method for more understanding
-Note: DON NOT FORGET TO MENTION THE '/' IN THE href LINK SO IT BECOME RECOGNIZABLE BY THE SPRING FRAMEWORK
+Note: DO NOT FORGET TO MENTION THE '/' IN THE href LINKS IN THE SCRIPTS AND BOOTSTRAPS SO IT BECOME RECOGNIZABLE BY THE SPRING FRAMEWORK
 
 VALIDATIONS
 Actually this one is very important imagine you ask a user to enter a phone number and then they enter their name..
 
 CLIENT SIDE VALIDATIONS
-This is like when you put a must for a user to put the info or fill the field.
+This is like you do the validations only in the client side like only in the html..
 Go to a certain html field which you want to be must filled field and put required = "true"
-Note: this kind of validation is not safe because someone can interfere with your code in a browser and bypass it
+Note: this kind of validation is not safe because someone can interact with your code in a browser and bypass it
       so it is better to have both client side and server side validations
 
 VALIDATIONS WITH SPRING BOOT
-1. Inject the dependencies
-2. In each validation pojo class use @Valid annotation
+1. Inject the dependencies of the library such us Hibernate
+2. In each validation pojo class use @Valid annotation at the top
 Note: There are two libraries in Java which provides these validations, Javax and Hibernate.
-These validations we put in the Pojo classes in model package, check the contact Pojo class for more info
+These validations we put in the Pojo classes in model package, check the contact Pojo class for more information
 Note: We need to let the contact.html know that there is a validation.
 
 LETTING HTML KNOW ABOUT THE VALIDATION
@@ -182,29 +182,29 @@ LETTING HTML KNOW ABOUT THE VALIDATION
    find the form where the inputs are coming from and mention this th:object="${contact}"
 5. You also have to build a link between the field in a bean Contact class and the fields in the html file and for that,
     find the field where you put names in your html file and do this, remove the name and id's and id and add the thymeleaf
-    like this  th:object="${contact}"
-Note: Now whenever a user submitting a change in the html file action will perform which goes to savaMessage method inside
+    like this  th:field="*{mobileNum}"
+Note: Now whenever a user submitting a change in the html file action will perform, which goes to savaMessage method inside
       the contactController class there we need to make some changes inside the method input parameter
 6. add the @Valid and @ModelAttribute("contact") to method input parameter before the Contact object which is inside the
-    method input parameter, after the contact object put a coma and add Error object so if there is any error identified
-    our spring frame work will send the error to us.
-Notes: Here you have a big chance to make a mess this is kinda messy work because after you declare the errors object
+    method input parameter, after the contact object put a coma and add Errors object so if there is any error identified
+    our spring frame work will send the error to us and to the client maybe to the client only I don't remember.
+Note: Here you have a big chance to make a mess this is kinda messy work because after you declare the errors object
         in the method input you might wanna make changes inside the method to get the errors which you gonna have to use
         log with some if statements and for that also you method needs to return String type because you are getting errors
-        from the log and this is you must do
-7. Write an if statement to check if there is any errors which if there is you will catch them with a log object
+        from the log and this is what you must do
+7. Write an if statement to check if there is any errors, which if there is, you will catch them with a log object
 8. Write a log to get the errors inside the if statement
 9. Change the method return type to String
-10. Return the html page as a String inside the if statement
-11. Also redirect with String only not with Model type...
+10. Return the html page as a String inside the if statement to display the errors to the client
+11. Also redirect with String only not with Model type... this will redirect the new html page if there is no errors
 Note: Check the ContactController for more understanding
-13. And you should go to the Contact html file to displaying the errors which you are getting from the backend
+13. And you should go to the Contact html file to display the errors which you are getting from the backend
     past this on top of the form
         <ul>
                             <li class="alert alert-danger" role="alert"
                                 th:each="error : ${#fields.errors('contact.*')}" th:text="${error}" />
-                        </ul>
-
+        </ul>
+Note: you also can build your own validations
 
 
 

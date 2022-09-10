@@ -222,7 +222,7 @@ Note: Don't create large logic inside your constructor
 @Request
 1. Life time is very short
 2. Takes a lot of memory
-3. A lot of garbage collections
+3. A lot of garbage collections happening
 4. Use it to only sensitive
 Note: So don't use it when you need it..
 

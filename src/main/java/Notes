@@ -207,6 +207,45 @@ Note: Check the ContactController for more understanding
 Note: you also can build your own validations
 
 
+                                               SPRING WEB SCOPES
+SCOPES
+When a bean is created with these scopes
+1. @RequestScope -> every application you do in the web will result as an HTTP request
+2. @SessionScope -> every application you do in the web will create instance of the Session until the session in invalidated
+    like when the user cleaning the cache
+3. @ApplicationScope -> will create a single unique bean for your entire application, each user will get the same instance
+
+USE CASES OF SCOPES
+
+Note: Don't create large logic inside your constructor
+
+@Request
+1. Life time is very short
+2. Takes a lot of memory
+3. A lot of garbage collections
+4. Use it to only sensitive
+Note: So don't use it when you need it..
+
+@Session
+1. Not commonly created
+2. Have long life
+3. Good to store information and use the same information according to the that information along the whole page
+Note: Don't store many info like image etc.
+
+@Application
+1. Created only once and the same bean will be use with all users, this is like Singleton
+2. Avoid the Race condition just like in Singleton, make it for mutable only
+Note: There is case where the Singleton and Application acts different, like when you define Multiple Application Context
+      your Singleton will have instance for each application where in the Application will have only one only one instance
+
+
+
+
+
+
+
+
+
 
 
 

@@ -55,11 +55,17 @@ public class ContactController {
     /*this method will redirect the user to the fresh new page*/
     public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
         contactService.saveMessageDetails(contact);
+        /*checking if there is any errors and acts accordingly*/
         if (errors.hasErrors()){
             log.error("Contact form validation failed due to: " + errors.toString());
             return "contact.html";
         }
+        /*incrementing the counter by one every single time a user submitting a message to backend*/
+        contactService.saveMessageDetails(contact);
+        contactService.setCounter(contactService.getCounter());
+        log.info("Number of times the contact form is submitted: " + contactService.getCounter());
         return "redirect:/contact";
     }
+
 
 }

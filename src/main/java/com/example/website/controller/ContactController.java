@@ -62,7 +62,7 @@ public class ContactController {
         }
         /*incrementing the counter by one every single time a user submitting a message to backend*/
         contactService.saveMessageDetails(contact);
-        contactService.setCounter(contactService.getCounter());
+        contactService.setCounter(contactService.getCounter() + 1);
         log.info("Number of times the contact form is submitted: " + contactService.getCounter());
         return "redirect:/contact";
     }

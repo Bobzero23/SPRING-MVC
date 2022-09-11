@@ -6,14 +6,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
 @Slf4j
 @Service
 //@RequestScope -> when you use this each time you submit to the backend the counter will not be incremented
-@SessionScope /* -> when you use this each time your submit to the backend the counter will be incremented*/
-
+//@SessionScope /* -> when you use this each time your submit to the backend the counter will be incremented*/
+@ApplicationScope /* and this is how you use the @ApplicationScope*/
 public class ContactService {
 
     /*initializing the counter*/

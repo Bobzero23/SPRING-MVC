@@ -237,7 +237,7 @@ Note: Don't store many info like image etc.
 2. Avoid the Race condition just like in Singleton, make it for mutable only
 Note: There is case where the Singleton and Application acts different, like when you define Multiple Application Context
       your Singleton will have instance for each application where in the Application will have only one only one instance
-
+3. Also this is useful like when you wanna mention total number of visitor of the website
 
 
 

@@ -248,7 +248,10 @@ AUTHENTICATION                                          AUTHORIZATION
 2.Happens before authorization                         2.Can't happen before the authentication
 3.401 error if authentication fails                    3.403 if authorization fails
 
-
+IMPLEMENTATION - INJECTION
+1. Inject the dependencies -> Just by injecting dependency Spring security will bring the log in without you do anything
+Note: As default the Spring will create the log in page and as default the log in user name is user and password is
+      is generally in the console where you started the project, I think it changes each time you restart the project
 
 
 

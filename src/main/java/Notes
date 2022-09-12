@@ -253,8 +253,11 @@ IMPLEMENTATION - INJECTION
 Note: As default the Spring will create the log in page and as default the log in user name is user and password is
       is generally in the console where you started the project, I think it changes each time you restart the project
 
-
-
+CONFIGURING USERNAME AND PASSWORD USING APPLICATION PROPERTY
+Go to the Application properties and write these
+   spring.security.user.name = Bobzero
+   spring.security.user.password = 1234
+Note: This is not recommended because you might have so many users
 
 
 

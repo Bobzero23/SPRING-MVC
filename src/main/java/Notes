@@ -258,6 +258,52 @@ Go to the Application properties and write these
    spring.security.user.password = 1234
 Note: This is not recommended because you might have so many users
 
+PERMITTING / ALLOWING ALL THE PAGE TO BE ACCESSIBLE PUBLICLY
+1. Create a class which will have the configuration annotation
+2. This class will extend the WebSecurityConfigurerAdapter
+3. Also this class shall override the configure method which accepts HttpSecurity as a method parameter
+
+formLogin() -> used for supporting username and password through an html form
+httpBasic() -> used for supporting username and password to be send inside an http header like when someone is
+trying to invoke my rest APIs
+anyRequest() -> for any Request in the website or any API
+
+Note: Also you can write your conditions in if statement like in which condition you want your website to be accessible
+      with a password and so on..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /********************************************REVIEWED TO 130-TH LINE***************************************************/

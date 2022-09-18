@@ -271,6 +271,13 @@ anyRequest() -> for any Request in the website or any API
 Note: Also you can write your conditions in if statement like in which condition you want your website to be accessible
       with a password and so on..
 
+DENYING ALL THE PAGE TO BE ACCESSIBLE
+...check the code for more information
+This denies even if the user is valid user
+
+Note: Normally you can use permitAll() or denyAll() on the top of whatever the case you want  and most of the times it is
+      being used in the CSS/JS/IMAGES/Rest API files
+
 
 
 

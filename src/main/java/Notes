@@ -278,8 +278,9 @@ This denies even if the user is valid user
 Note: Normally you can use permitAll() or denyAll() on the top of whatever the case you want  and most of the times it is
       being used in the CSS/JS/IMAGES/Rest API files
 
-
-
+COSTUME SECURITY CONFIGURATION
+1. Instead of using anyRequest() you will configure security page by page... check the code for more information
+2. Use authenticated() to only allow the valid users to access a particular page
 
 
 

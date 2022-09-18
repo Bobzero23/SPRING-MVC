@@ -99,8 +99,7 @@ maven file and delete the files found inside the target file and that will resol
 GETTING THE MESSAGE FROM THE PAGE
 1. Go to the particular html file controller which you are working with and create another method and pass the map too.
 2. Create a method with value ModelAndView which takes @RequestParam for each value match in the html, please make sure
-    the values matches I mean from UI and in the code you are writing
-
+   the values matches I mean from UI and in the code you are writing
 
 MODEL AND VIEW
 This object is used when you want to take an input from the user and to tell the user than you received the input by like
@@ -113,9 +112,9 @@ which taking all the values and create their getters and setters and also the to
 
 NORMALLY INSIDE A PRODUCT WEB SERVICE YOU WILL BUILD YOUR LOGIC SUCH A WAY THAT INSIDE YOUR CONTROLLER LAYER YOU WILL DO
 ALL YOUR PRIMARY VALIDATION AND AFTER FINISHING THAT YOU WILL GIVE THE JOB TO SERVICE LAYER AND AFTER SERVICE LAYER IS DONE
-IT WILL SEND THE WORK TO THE PERSISTENCE LAYER AND TO MAKE ALL OF THESE WORK TOGETHER YOU GONNA HAVE TO THE AUTO WIRING
+IT WILL SEND THE WORK TO THE PERSISTENCE LAYER AND TO MAKE ALL OF THESE WORK TOGETHER YOU GONNA HAVE TO DO THE AUTO WIRING
 INJECTION IN CONTACT CONTROLLER EXAMPLE IF YOU WANNA WORK WITH CONTACT SERVICE, AFTER YOU DO THE INJECTION THE OBJECT OF
-THEN INJECTED CLASS WILL BE A BEAN WHICH WE CAN USE TO CALL ITS METHODS IN THE CERTAIN POJO
+THE INJECTED CLASS WILL BE A BEAN WHICH WE CAN USE TO CALL ITS METHODS IN THE CERTAIN POJO
 
 HOW TO SEND A DATA FROM BACKEND TO FRONTEND
 1. We need a certain class which will define the structure of a particular html file, which we normally put in model package
@@ -261,5 +260,5 @@ Note: This is not recommended because you might have so many users
 
 
 
-/********************************************REVIEWED TO 75-THS LINE***************************************************/
+/********************************************REVIEWED TO 130-TH LINE***************************************************/
 

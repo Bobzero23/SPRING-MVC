@@ -26,7 +26,7 @@ public class ContactService {
     }
 
     /*creating a log object*/
-    /*I used the lombok annotation for log so it handles the rest*/
+    /*I used the lombok annotation for log, so it handles the rest*/
 //     private static Logger log = LoggerFactory.getLogger(ContactService.class);
 
     /*save contact detail into DB*/

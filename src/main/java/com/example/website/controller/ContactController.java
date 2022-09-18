@@ -50,7 +50,6 @@ public class ContactController {
 //    }
 
 
-
     @RequestMapping(value = "/saveMsg",method = POST)
     /*this method will redirect the user to the fresh new page*/
     public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
@@ -66,6 +65,5 @@ public class ContactController {
         log.info("Number of times the contact form is submitted: " + contactService.getCounter());
         return "redirect:/contact";
     }
-
 
 }

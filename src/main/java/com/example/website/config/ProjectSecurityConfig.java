@@ -31,9 +31,9 @@ public class ProjectSecurityConfig  {
                 .authorizeRequests()
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/holidays/**").permitAll()
-                .mvcMatchers("/contact").permitAll()
+                .mvcMatchers("/contact").authenticated()
                 .mvcMatchers("/saveMsg").permitAll()
-                .mvcMatchers("/courses").authenticated()
+                .mvcMatchers("/courses").permitAll()
                 .mvcMatchers("/about").permitAll()
                 .and().formLogin().and().httpBasic();
 

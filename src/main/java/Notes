@@ -282,7 +282,10 @@ COSTUME SECURITY CONFIGURATION
 1. Instead of using anyRequest() you will configure security page by page... check the code for more information
 2. Use authenticated() to only allow the valid users to access a particular page
 
-
+CSRF
+Thymeleaf handles the CSRF by defaults but if you don't use thyme leaf and use normal html you will get un error
+while trying to submit something to the backend.. and that is when your SpringBoot stops your get and post request
+to avoid the CSRF attack..
 
 
 

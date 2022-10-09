@@ -10,6 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -53,7 +56,6 @@ public class ContactController {
     @RequestMapping(value = "/saveMsg",method = POST)
     /*this method will redirect the user to the fresh new page*/
     public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
-        contactService.saveMessageDetails(contact);
         /*checking if there is any errors and acts accordingly*/
         if (errors.hasErrors()){
             log.error("Contact form validation failed due to: " + errors.toString());

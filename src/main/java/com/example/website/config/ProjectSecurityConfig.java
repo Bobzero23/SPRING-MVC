@@ -29,9 +29,9 @@ public class ProjectSecurityConfig  {
         /*Customizing the security configuration*/
         http.csrf().disable()
                 .authorizeRequests()
-                .mvcMatchers("/home").permitAll()
+                .mvcMatchers("/home").authenticated()
                 .mvcMatchers("/holidays/**").permitAll()
-                .mvcMatchers("/contact").authenticated()
+                .mvcMatchers("/contact").permitAll()
                 .mvcMatchers("/saveMsg").permitAll()
                 .mvcMatchers("/courses").permitAll()
                 .mvcMatchers("/about").permitAll()

@@ -40,7 +40,7 @@ THYMELEAF
 HOW TO USE THYMELEAF
 1. Create your html folder inside the template folder because thymeleaf is a template file
 2. then you need to import the namespace of the thymeleaf inside of a html file in the html tag
-    after you do that your html wills start using thymeleaf tags which start with th:
+    after you do that your html will start using thymeleaf tags which start with th:
 3. After doing that we gonna pass the Model interface and its object on the particular html controller file
     then we will be good to go
 4. After passing the Model interface as a parameter in the particular html method then you use the model.addAttribute
